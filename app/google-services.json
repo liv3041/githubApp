@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "662065620713",
+    "project_id": "githubapp-6f7c3",
+    "storage_bucket": "githubapp-6f7c3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662065620713:android:d76d984cfb2240ad47f278",
+        "android_client_info": {
+          "package_name": "com.toonandtools.githubapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "662065620713-0enq2odvjmpnn6vsruua5qbnshkdgdfd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.toonandtools.githubapp",
+            "certificate_hash": "058022712ffa9f752d61dec39644fa812627fa36"
+          }
+        },
+        {
+          "client_id": "662065620713-hi801ch5b2e4heebv6rscipcr9p1lhbj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXAh2sf53eP8sAIzFA7wwokwktIH98HBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "662065620713-hi801ch5b2e4heebv6rscipcr9p1lhbj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

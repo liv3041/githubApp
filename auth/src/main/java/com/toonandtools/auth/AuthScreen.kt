@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.sp
 
 
 @Composable
-fun AuthScreen() {
+fun AuthScreen(onSignInClicked: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -46,7 +46,7 @@ fun AuthScreen() {
             )
 
             Button(
-                onClick = { /* TODO: Implement Google Sign-In */ },
+                onClick = onSignInClicked,
                 shape = MaterialTheme.shapes.medium,
                 colors = ButtonDefaults.buttonColors(containerColor = Color.White),
                 modifier = Modifier
