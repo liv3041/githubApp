@@ -2,6 +2,11 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.dagger.hilt.android")
+    kotlin("kapt") // If you're using KAPT for annotation processing
+
+
+
 //    alias(libs.plugins.google.gms.google.services)
 }
 
@@ -59,4 +64,29 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Retrofit & Gson
+    implementation (libs.retrofit)
+    implementation(libs.converter.gson)
+
+// Lifecycle + ViewModel
+    implementation (libs.androidx.lifecycle.viewmodel.compose)
+
+// Coroutine support
+    implementation (libs.kotlinx.coroutines.android)
+
+    // Hilt
+    implementation ("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
+//    ksp("com.google.dagger:hilt-compiler:2.51") // 👈 use ksp here
+//    ksp("androidx.hilt:hilt-compiler:1.0.0")
+
+
+    implementation ("androidx.hilt:hilt-navigation-compose:1.1.0")
+
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+
+
+
+
 }
