@@ -6,15 +6,6 @@ import com.toonandtools.main.db.RepoEntity
 import com.toonandtools.main.domain.GitHubRepository
 import com.toonandtools.main.domain.Repo
 
-//
-//import com.toonandtools.main.domain.GitHubRepository
-//import com.toonandtools.main.domain.Repo
-//
-//class GitHubRepositoryImpl(private val api: GitHubApi) : GitHubRepository {
-//    override suspend fun getRepos(username: String): List<Repo> {
-//        return api.getUserRepos(username).map { it.toRepo() }
-//    }
-//}
 class GitHubRepositoryImpl(
     private val api: GitHubApi,
     private val dao: RepoDao
