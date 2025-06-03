@@ -38,7 +38,10 @@ android {
     buildFeatures {
         compose = true
     }
+
+
 }
+
 
 dependencies {
     implementation(project(":auth"))

@@ -4,8 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.lifecycle.ViewModelProvider
+import androidx.room.Room
 import com.toonandtools.main.data.GitHubApi
 import com.toonandtools.main.data.GitHubRepositoryImpl
+import com.toonandtools.main.db.AppDatabase
 import com.toonandtools.main.domain.GetReposUseCase
 import com.toonandtools.main.presentation.RepoScreen
 import com.toonandtools.main.presentation.RepoViewModel
@@ -28,7 +30,15 @@ class HomeActivity : ComponentActivity() {
             .build()
 
         val api = retrofit.create(GitHubApi::class.java)
-        val repository = GitHubRepositoryImpl(api)
+
+        val db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java,
+            "github-db"
+        ).build()
+        val dao = db.repoDao()
+
+        val repository = GitHubRepositoryImpl(api,dao)
         val useCase = GetReposUseCase(repository)
 
         // Create ViewModel using factory

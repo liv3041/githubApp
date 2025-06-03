@@ -41,7 +41,9 @@ android {
     buildFeatures {
         compose = true
     }
+
 }
+
 
 dependencies {
 
@@ -57,6 +59,9 @@ dependencies {
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
+//    annotationProcessor(libs.androidx.room.compiler)
+//    implementation(libs.androidx.room.common.jvm)
+//    implementation(libs.androidx.room.runtime.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -85,6 +90,16 @@ dependencies {
     implementation ("androidx.hilt:hilt-navigation-compose:1.1.0")
 
     implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+
+
+    implementation ("androidx.room:room-runtime:2.7.1")
+    kapt (libs.androidx.room.compiler)
+
+    // Optional: Kotlin Extensions and Coroutines support
+    implementation ("androidx.room:room-ktx:2.7.1")
+
+    // Optional: Testing
+    testImplementation ("androidx.room:room-testing:2.7.1")
 
 
 
