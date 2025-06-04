@@ -1,10 +1,12 @@
 package com.toonandtools.main
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
+import com.google.firebase.auth.FirebaseAuth
 import com.toonandtools.main.data.GitHubApi
 import com.toonandtools.main.data.GitHubRepositoryImpl
 import com.toonandtools.main.db.AppDatabase
@@ -19,6 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class HomeActivity : ComponentActivity() {
 
     private lateinit var viewModel: RepoViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +50,20 @@ class HomeActivity : ComponentActivity() {
 
         setContent {
             GithubAppTheme {
-                RepoScreen(viewModel)
+//                RepoScreen(viewModel)
+                RepoScreen(
+                    viewModel = viewModel,
+                    onSignOut = {
+                        FirebaseAuth.getInstance().signOut()
+                        val intent = Intent(this, Class.forName("com.toonandtools.auth.AuthActivity"))
+                        startActivity(intent)
+                        finish() // optional: close current activity
+
+
+                        // Navigate to login screen or finish the activity
+                    }
+                )
+
             }
         }
     }

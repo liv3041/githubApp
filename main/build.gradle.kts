@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
+    implementation(libs.androidx.foundation.layout.android)
 //    annotationProcessor(libs.androidx.room.compiler)
 //    implementation(libs.androidx.room.common.jvm)
 //    implementation(libs.androidx.room.runtime.android)
