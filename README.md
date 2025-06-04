@@ -1,5 +1,5 @@
-# Notes Application
-### Android App with Firebase Authentication, Realtime Database and SQLite
+# Github Repository Application
+### Android App with Google Firebase Authentication, Fetching Github Repositories with Github API
 
 ### Tech Stack
 
